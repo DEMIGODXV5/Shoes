@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    /*display: flex;
+    justify-content: center;
+    align-items: center;
+    u can also do this to align in centre instead of using margin:auto*/
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;/*no scroll bar appers for x axis . restricts scrolling towards left or right*/
+    background-image: url(Images/sneakerwall.jpg);
+    background-size: cover;
+
+}
+
+.store{
+    /*border: 2px solid black;*/
+    margin: auto;/*setting the margin property to auto automatically distributes the margins of an element evenly on its left and right sides, effectively - "centering the element horizontally within its parent container"*/
+    width: 65%;
+    min-height: 100%;/*This means the element will be at least as tall as its parent, but can be taller if its content or other styles require it to extend */
+    /*background-color: rgba(128, 128, 128, 0.236); select any colour u want and reduce the opacity*/
+   backdrop-filter:blur(1px);/* makes the backgrnd in the box blur.. u cannot use filter:blur() cause it will make the whole box along with text blur*/
+    
+
+}
+
+h1{
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+    color:cyan;
+    text-shadow: 3px 3px 3px  black;/* 4 parameters used = x , y, blur , colour*/
+    text-decoration: underline 3px black;
+    
+}
+.all_shoes{
+    width: 100%;/*will take 100% of the width of .store div*/
+    height: 100%;/*will take 100% of the height of .store div*/
+    display: flex;
+    flex-wrap: wrap;/*Values of flex-wrap:
+1)nowrap (default): Flex items are forced onto a single line. If they overflow, they may be clipped or cause horizontal scrolling. 
+2)wrap: Flex items wrap onto multiple lines, creating new rows or columns as needed. 
+3)wrap-reverse: Similar to wrap, but the order of the lines is reversed. */
+    justify-content: space-between;
+    
+}
+
+.card{
+    border-radius: 30px;
+    width: 30%;
+    height: 90%;
+    border: 2px solid black;
+    padding: 10px;
+    box-shadow: 7px 7px 10px rgb(201, 201, 201) ;
+    margin-bottom: 40px;
+}
+.shoe_pic{
+    width: 100%; 
+    height: 320px;
+    overflow: hidden;
+    border-radius: 30px;
+    
+}
+
+.shoe_pic >img{
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.shoe_pic >img:hover{
+    cursor:all-scroll;
+    scale: 1.3;/*used to scale up the img or whatever u want to zoom*/
+    transition: all 0.2s ease-in;/*transitition: property duration timing_function delay */
+}
+
+.details{
+    padding-top: 10px;
+    padding-left: 5px;  
+    padding-right: 5px;
+    display: flex;
+    /*flex-direction: row;   no need to give flex direction as row as its default row.. if u want to flex direction as column then u need to give explicitly*/
+    justify-content: space-between;
+    align-items: center;
+}
+.description{
+    color:beige;
+    text-decoration: underline solid ;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.cart >img{
+    width: 60%;
+}
+.cart >img:hover{
+    scale: 1.2;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
